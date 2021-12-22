@@ -14256,10 +14256,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;treatment&#39;</span><span class="p">][</span><span class="s1">&#39;landing_page&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;landing_page&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;new_page&#39;</span><span class="p">][</span><span class="s1">&#39;group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;(group == &#39;treatment&#39; and landing_page == &#39;old_page&#39;)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14275,13 +14275,13 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>3893</pre>
+<pre>1965</pre>
 </div>
 
 </div>
@@ -14649,7 +14649,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -14668,7 +14668,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -14692,7 +14692,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;group == &quot;control&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -14711,7 +14711,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
 
@@ -14735,7 +14735,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;group == &quot;treatment&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -14754,7 +14754,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -14778,7 +14778,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;landing_page&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;new_page&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -14797,7 +14797,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -14859,7 +14859,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p_new</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -14879,7 +14879,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -14903,7 +14903,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p_old</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -14923,7 +14923,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -14947,7 +14947,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_new</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;treatment&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -14967,7 +14967,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
@@ -14991,7 +14991,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_old</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;control&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -15011,7 +15011,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -15035,7 +15035,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_page_converted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">p_new</span><span class="p">,</span><span class="n">n_new</span><span class="p">)</span>
@@ -15055,13 +15055,13 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.11941366733191108</pre>
+<pre>0.11930355791067374</pre>
 </div>
 
 </div>
@@ -15079,7 +15079,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">old_page_converted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">p_old</span><span class="p">,</span><span class="n">n_old</span><span class="p">)</span>
@@ -15099,13 +15099,13 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.11984938805292068</pre>
+<pre>0.1180252488401228</pre>
 </div>
 
 </div>
@@ -15123,7 +15123,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_page_converted</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">old_page_converted</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -15142,13 +15142,13 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>-0.0004357207210095998</pre>
+<pre>0.0012783090705509315</pre>
 </div>
 
 </div>
@@ -15166,7 +15166,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diffs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15191,7 +15191,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">obs_diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;group == &quot;treatment&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df2</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;group == &quot;control&quot;&#39;</span><span class="p">)[</span><span class="s1">&#39;converted&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
@@ -15218,7 +15218,7 @@ Name: user_id, dtype: int64</pre>
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -15238,7 +15238,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">p_diffs</span> <span class="o">&gt;</span> <span class="n">obs_diff</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -15257,13 +15257,13 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.9034</pre>
+<pre>0.9046</pre>
 </div>
 
 </div>
@@ -15293,7 +15293,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
@@ -15340,7 +15340,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">proportions_ztest</span><span class="p">([</span><span class="n">convert_old</span><span class="p">,</span><span class="n">convert_new</span><span class="p">],[</span><span class="n">n_old</span><span class="p">,</span><span class="n">n_new</span><span class="p">],</span><span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;smaller&#39;</span><span class="p">)</span>
@@ -15359,7 +15359,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[95]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
 
 
@@ -15409,7 +15409,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;intercept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -15430,7 +15430,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[99]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
 
 
 
@@ -15539,7 +15539,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">logit_mod</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span><span class="n">df2</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span><span class="s1">&#39;ab_page&#39;</span><span class="p">]])</span>
@@ -15583,7 +15583,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span>
@@ -15602,7 +15602,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[103]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 
 
 
@@ -15615,7 +15615,7 @@ Name: user_id, dtype: int64</pre>
   <td>Dependent Variable:</td>     <td>converted</td>          <td>AIC:</td>        <td>212780.3502</td>
 </tr>
 <tr>
-         <td>Date:</td>        <td>2021-12-21 20:10</td>       <td>BIC:</td>        <td>212801.5095</td>
+         <td>Date:</td>        <td>2021-12-21 21:59</td>       <td>BIC:</td>        <td>212801.5095</td>
 </tr>
 <tr>
    <td>No. Observations:</td>       <td>290584</td>       <td>Log-Likelihood:</td>  <td>-1.0639e+05</td>
@@ -15688,7 +15688,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[110]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./countries.csv&#39;</span><span class="p">)</span>
@@ -15703,173 +15703,11 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[111]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Create the necessary dummy variables</span>
 <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span><span class="s1">&#39;UK&#39;</span><span class="p">,</span><span class="s1">&#39;US&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
-<span class="n">df_new</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[111]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>timestamp</th>
-      <th>group</th>
-      <th>landing_page</th>
-      <th>converted</th>
-      <th>intercept</th>
-      <th>cont_dum</th>
-      <th>ab_page</th>
-      <th>CA</th>
-      <th>UK</th>
-      <th>US</th>
-    </tr>
-    <tr>
-      <th>user_id</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>834778</th>
-      <td>UK</td>
-      <td>2017-01-14 23:08:43.304998</td>
-      <td>control</td>
-      <td>old_page</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>928468</th>
-      <td>US</td>
-      <td>2017-01-23 14:44:16.387854</td>
-      <td>treatment</td>
-      <td>new_page</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>822059</th>
-      <td>UK</td>
-      <td>2017-01-16 14:04:14.719771</td>
-      <td>treatment</td>
-      <td>new_page</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>711597</th>
-      <td>UK</td>
-      <td>2017-01-22 03:14:24.763511</td>
-      <td>control</td>
-      <td>old_page</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>710616</th>
-      <td>UK</td>
-      <td>2017-01-16 13:14:44.000513</td>
-      <td>treatment</td>
-      <td>new_page</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>h. Though you have now looked at the individual factors of country and page on conversion, we would now like to look at an interaction between page and country to see if there significant effects on conversion.  Create the necessary additional columns, and fit the new model.</p>
-<p>Provide the summary results, and your conclusions based on the results.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[112]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Fit Your Linear Model And Obtain the Results</span>
 <span class="n">logit_mod</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span><span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span><span class="s1">&#39;ab_page&#39;</span><span class="p">,</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span><span class="s1">&#39;UK&#39;</span><span class="p">]])</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">logit_mod</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 <span class="n">results</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span>
@@ -15902,7 +15740,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[112]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
 
 
 
@@ -15915,7 +15753,7 @@ Name: user_id, dtype: int64</pre>
   <td>Dependent Variable:</td>     <td>converted</td>          <td>AIC:</td>        <td>212781.1253</td>
 </tr>
 <tr>
-         <td>Date:</td>        <td>2021-12-21 20:45</td>       <td>BIC:</td>        <td>212823.4439</td>
+         <td>Date:</td>        <td>2021-12-21 22:00</td>       <td>BIC:</td>        <td>212823.4439</td>
 </tr>
 <tr>
    <td>No. Observations:</td>       <td>290584</td>       <td>Log-Likelihood:</td>  <td>-1.0639e+05</td>
@@ -15961,7 +15799,7 @@ Name: user_id, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[113]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0149</span><span class="p">),</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0408</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0099</span><span class="p">)</span>
@@ -15980,7 +15818,7 @@ Name: user_id, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[113]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 
 
 
@@ -15998,7 +15836,164 @@ Name: user_id, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>This model lacks both statistical and practical significance. Each of the coefficients are not significantly different from zero, and their impact on the dependent variable doesn't shift the output by an amount materially different than 1x the change in independent variable.</strong></p>
+<p><strong>This model lacks both statistical and practical significance. Each of the coefficients are not significantly different from zero, and their impact on the dependent variable doesn't shift the output by an amount materially different than 1x the change in independent variable. Based on these results, the new landing page does not seem to have any impact on the conversion rate to the new page for users.</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>h. Though you have now looked at the individual factors of country and page on conversion, we would now like to look at an interaction between page and country to see if there significant effects on conversion.  Create the necessary additional columns, and fit the new model.</p>
+<p>Provide the summary results, and your conclusions based on the results.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Fit Your Linear Model And Obtain the Results</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_CA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_page&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_UK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_page&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;UK&#39;</span><span class="p">]</span>
+<span class="n">logit_mod</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span><span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span><span class="s1">&#39;ab_page&#39;</span><span class="p">,</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span><span class="s1">&#39;UK&#39;</span><span class="p">,</span><span class="s1">&#39;ab_CA&#39;</span><span class="p">,</span><span class="s1">&#39;ab_UK&#39;</span><span class="p">]])</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">logit_mod</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">results</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Optimization terminated successfully.
+         Current function value: 0.366109
+         Iterations 6
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table class="simpletable">
+<tr>
+        <td>Model:</td>              <td>Logit</td>      <td>Pseudo R-squared:</td>    <td>0.000</td>   
+</tr>
+<tr>
+  <td>Dependent Variable:</td>     <td>converted</td>          <td>AIC:</td>        <td>212782.6602</td>
+</tr>
+<tr>
+         <td>Date:</td>        <td>2021-12-21 22:06</td>       <td>BIC:</td>        <td>212846.1381</td>
+</tr>
+<tr>
+   <td>No. Observations:</td>       <td>290584</td>       <td>Log-Likelihood:</td>  <td>-1.0639e+05</td>
+</tr>
+<tr>
+       <td>Df Model:</td>              <td>5</td>            <td>LL-Null:</td>      <td>-1.0639e+05</td>
+</tr>
+<tr>
+     <td>Df Residuals:</td>         <td>290578</td>        <td>LLR p-value:</td>      <td>0.19199</td>  
+</tr>
+<tr>
+      <td>Converged:</td>           <td>1.0000</td>           <td>Scale:</td>         <td>1.0000</td>   
+</tr>
+<tr>
+    <td>No. Iterations:</td>        <td>6.0000</td>              <td></td>               <td></td>      
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>       <th>Coef.</th>  <th>Std.Err.</th>     <th>z</th>      <th>P>|z|</th> <th>[0.025</th>  <th>0.975]</th> 
+</tr>
+<tr>
+  <th>intercept</th> <td>-1.9865</td>  <td>0.0096</td>  <td>-206.3440</td> <td>0.0000</td> <td>-2.0053</td> <td>-1.9676</td>
+</tr>
+<tr>
+  <th>ab_page</th>   <td>-0.0206</td>  <td>0.0137</td>   <td>-1.5052</td>  <td>0.1323</td> <td>-0.0473</td> <td>0.0062</td> 
+</tr>
+<tr>
+  <th>CA</th>        <td>-0.0175</td>  <td>0.0377</td>   <td>-0.4652</td>  <td>0.6418</td> <td>-0.0914</td> <td>0.0563</td> 
+</tr>
+<tr>
+  <th>UK</th>        <td>-0.0057</td>  <td>0.0188</td>   <td>-0.3057</td>  <td>0.7598</td> <td>-0.0426</td> <td>0.0311</td> 
+</tr>
+<tr>
+  <th>ab_CA</th>     <td>-0.0469</td>  <td>0.0538</td>   <td>-0.8718</td>  <td>0.3833</td> <td>-0.1523</td> <td>0.0585</td> 
+</tr>
+<tr>
+  <th>ab_UK</th>     <td>0.0314</td>   <td>0.0266</td>   <td>1.1807</td>   <td>0.2377</td> <td>-0.0207</td> <td>0.0835</td> 
+</tr>
+</table>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0206</span><span class="p">),</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0175</span><span class="p">),</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0057</span><span class="p">),</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0469</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">.0314</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(0.9796107305032505,
+ 0.9826522356650733,
+ 0.9943162141784333,
+ 0.9541828111007263,
+ 1.0318981806179213)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>The interaction of country and ab_page also does not add meaningful explanatory power. This model lacks both statistical and practical significance. Each of the coefficients are not significantly different from zero, and their impact on the dependent variable doesn't shift the output by an amount materially different than 1x the change in independent variable. Based on these results, the new landing page does not seem to have any impact on the conversion rate to the new page for users.</strong></p>
 
 </div>
 </div>
